@@ -10,7 +10,8 @@ jobs:
       shell: bash
       run: |
         ls -la
-        regedit /s SimplySign.reg
+        echo importing
+        reg import SimplySign.reg
         echo exporting
         reg export HKEY_LOCAL_MACHINE\\SOFTWARE\\Certum\\SimplySign export.reg
         echo export done
